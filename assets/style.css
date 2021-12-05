@@ -10,10 +10,10 @@
     grid-gap: 0px;
 }
 
-header {
+.header {
     display: grid;
     grid-area: header;
-    grid-template-areas: "logo headline btn__basket";
+    grid-template-areas: "logo headline basket";
     grid-template-columns: 1fr 1fr 8fr;
     grid-template-rows: 1fr;
     justify-items: end;
@@ -22,28 +22,28 @@ header {
     margin-right: 4vw;
 }
 
-.logo {
+.header__logo {
     grid-area: logo;
 
 }
 
-.headline {
+.header__headline {
     grid-area: headline;
     padding-left: 10px;
 }
 
-.btn__basket {
-    grid-area: btn__basket;
+.header__button {
+    grid-area: basket;
     width: 115px;
     height: 38px;
 }
 
-.btn__buy {
+.main__button {
     width: 270px;
     height: 10vh;
 }
 
-.btn__sub {
+.card__button {
     width: 135px;
     height: 38px;
     margin-top: 15px;
@@ -55,11 +55,11 @@ button {
     color: #FFFFFF;
 }
 
-.redbox {
+.card-red {
     background: #EC615B;
 }
 
-footer {
+.footer {
     display: grid;
     grid-area: footer;
     grid-template-areas: "footer1 footer2 footer3 footer4 ...";
@@ -89,9 +89,9 @@ footer {
 
 /*форматирование текста*/
 
-.btn__basket,
-.btn__sub,
-.btn__buy,
+.header__button,
+.main__button,
+.card__button,
 h1,
 h5 {
     font-style: normal;
@@ -109,18 +109,18 @@ h5 {
     line-height: 120%;
 }
 
-.bbtn__basket,
-.btn__sub {
+.header__button,
+.card__button {
     font-size: 13px;
     line-height: 13px;
 }
 
-.btn__buy {
+.main__button {
     font-size: 35px;
     line-height: 35px;
 }
 
-.vr__content,
+.main__content,
 .card-text,
 .footer {
     font-family: Roboto Slab;
@@ -131,7 +131,7 @@ h5 {
 }
 
 @media screen and (max-width: 767px) {
-    footer {
+    .footer {
         grid-template-areas: "footer1 footer2 footer3 footer4";
         grid-template-columns: 1.5fr repeat(3, 1fr);
         grid-template-rows: 1fr;
